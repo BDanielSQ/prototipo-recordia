@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Prototipo visual de RecordIA, un asistente sencillo para recordar actividades importantes.">
+  <title>RecordIA | Tus recordatorios</title>
+  <link rel="stylesheet" href="misestilos.css">
+</head>
+<body>
+  <div class="aplicacion">
+    <header class="encabezado">
+      <div class="marca">
+        <span class="marca__icono" aria-hidden="true">✓</span>
+        <div>
+          <p class="marca__nombre">RecordIA</p>
+          <p class="marca__lema">Tu asistente para recordar lo importante</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="saludo" aria-labelledby="titulo-principal">
+        <p>Buenos días</p>
+        <h1 id="titulo-principal">¿Qué necesitas recordar?</h1>
+      </section>
+
+      <section class="tarjeta tarjeta--principal" aria-labelledby="titulo-crear">
+        <h2 id="titulo-crear" class="solo-lectura">Crear un recordatorio</h2>
+        <form>
+          <label for="recordatorio">Escribe lo que necesitas recordar</label>
+          <textarea id="recordatorio" name="recordatorio" rows="4" placeholder="Mañana a las 10 tengo cita médica"></textarea>
+          <button class="boton boton--principal" type="button">Crear recordatorio</button>
+          <p class="texto-ayuda">Puedes escribirlo como lo dirías normalmente.</p>
+        </form>
+      </section>
+
+      <section class="seccion" aria-labelledby="titulo-interpretacion">
+        <h2 id="titulo-interpretacion">Así lo entendería RecordIA</h2>
+        <article class="tarjeta interpretacion">
+          <dl class="datos-recordatorio">
+            <div>
+              <dt>Actividad</dt>
+              <dd>Cita médica</dd>
+            </div>
+            <div>
+              <dt>Fecha</dt>
+              <dd>Mañana</dd>
+            </div>
+            <div>
+              <dt>Hora</dt>
+              <dd>10:00</dd>
+            </div>
+          </dl>
+          <p class="estado"><span aria-hidden="true">✓</span> Listo para guardar</p>
+        </article>
+      </section>
+
+      <section class="seccion" aria-labelledby="titulo-hoy">
+        <h2 id="titulo-hoy">Mis recordatorios de hoy</h2>
+        <div class="lista-recordatorios">
+          <article class="recordatorio">
+            <span class="recordatorio__indicador" aria-hidden="true">✓</span>
+            <time datetime="08:00">08:00</time>
+            <p>Tomar medicamento</p>
+          </article>
+
+          <article class="recordatorio">
+            <span class="recordatorio__indicador" aria-hidden="true">✓</span>
+            <time datetime="11:00">11:00</time>
+            <p>Comprar alimentos</p>
+          </article>
+
+          <article class="recordatorio">
+            <span class="recordatorio__indicador" aria-hidden="true">✓</span>
+            <time datetime="15:00">15:00</time>
+            <p>Ir al médico</p>
+          </article>
+        </div>
+      </section>
+
+      <button class="boton boton--secundario" type="button">+ Nuevo recordatorio</button>
+    </main>
+
+    <footer>
+      <p>RecordIA cuida lo importante contigo.</p>
+    </footer>
+  </div>
+</body>
+</html>
